@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            background-color: black;
+            margin: auto;
+            color: white;
+            text-align: center;
+            width: 60vw;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <script>
+            window.alert('Responda a esta ficha!')
+            var nome = window.prompt('Qual seu nome?')
+        
+            var nasc = window.prompt('Ano que você nasceu?')
+        
+            var ano_atual = window.prompt('Ano atual?')
+        
+            var idade = ano_atual - nasc
+        
+            document.write(`Nome: ${nome}<br> </br> ` )
+            document.write(`Idade: ${idade}`)
+        </script>
+    </main>
+</body>
+</html>
