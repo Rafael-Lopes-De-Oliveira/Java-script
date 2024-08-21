@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste03</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }  
+    </style>
+</head>
+<body>
+    
+    
+    <form action="cadastro.php" method="post">
+        <script>
+            window.alert('Você deverá responder o questionario a seguir')
+            var nome = window.prompt('Qual seu nome:')
+            var idade = window.prompt('Sua idade:')
+            var cidade = window.prompt('Aonde você mora: ')
+            var hobs = window.prompt('Qual é seu hob(s)?')
+        </script>
+        <script>
+            document.writeln(`NOME:${nome} </br>`)
+            document.writeln(`IDADE:${idade}</br>`)
+            document.writeln(`MORANDO:${cidade}</br>`)
+            document.writeln(`Hobs:${hobs}`)
+
+            window.alert('OK, obg!')
+        </script>
+    </form>
+
+</body>
+</html>
