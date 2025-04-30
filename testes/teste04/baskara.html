@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula de Baskara</title>
+    <style>
+        div{
+            display: inline-block ;
+        }
+        input{
+            width: 60px;
+        }
+
+        input.numbers{
+            width: 37px;
+        }
+
+        input#calcular{
+            margin-top: 10px;
+            width: 90px;
+            flex: auto;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    A:<input type="number" name="varlora" id="varlora" class="numbers">
+    B:<input type="number" name="varlorb" id="varlorb" class="numbers">
+    C:<input type="number" name="varlorc" id="varlorc" class="numbers"> <br>
+    
+    <input type="button" value="calcular" id="calcular" onclick="calc()">:
+    
+    <div id="res">Resultado</div>
+
+    <script>
+
+        function calc(){
+            var a = window.document.querySelector('varlora')
+
+            var b = window.document.querySelector('valorb')
+
+            var c = window.document.querySelector('valorc')
+
+            var result = window.document.querySelector('div#res')
+
+            var na = number(a.value)
+            var nb = number(b.value)
+            var nc = number(c.value)
+
+
+            var delta = nb * nb - 4*na*nc
+
+            result.innerText = ` Valor de Delta é igual a ${delta} `
+
+        }
+    </script>
+
+</body>
+</html>
