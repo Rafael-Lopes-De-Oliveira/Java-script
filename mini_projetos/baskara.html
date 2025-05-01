@@ -58,16 +58,13 @@
             var nc = Number(c.value)
 
 
-            var delta = nb*nb - 4*na*nc
+            var delta = nb**2 - 4*na*nc
 
             let raizdelta = Math.sqrt(delta);
             var valx1 = (-nb + raizdelta ) /(2 * na)
             var valx2 = (-nb - raizdelta ) /(2 * na)
 
-
-
-
-            res.innerText =`△ = ${delta}| X1= ${valx1} | X2=${valx2}`
+            res.innerHTML =`△ = ${delta} <br> X1= ${valx1} <br> X2=${valx2}`
         }
 
         
