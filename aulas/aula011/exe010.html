@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistemas demultas</h1>
+
+    Velocidade do Carro <input type="number" name="textvel" id="textvel">Km/h
+    <input type="button" value="Verificar" onclick="calcmulta()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcmulta() {
+            
+            var vel = window.document.querySelector('input#textvel')
+
+            var res = window.document.querySelector('div#res')
+
+            var speed = Number(vel.value)
+
+            res.innerHTML = `<p>Sua velocidade é de <strong>${speed}Km/h</strong></p>`
+
+            // res.innerHTML += `<p>Dirija sempre com conto de segurança!</p>`
+
+             if (speed > 60){
+                 res.innerHTML += `<p>SUA VELOCIADE TA MUITO ALTA, AMIGÃO ACIMA DE <strong>60km/h</strong> TU SE FODE E TU TAVA A <strong>${speed}Km/h</strong></p>`
+             }
+            res.innerHTML +=`<p>VAI NA PAZ AMIGO, DEUS ESTÀ AO SEU LADO, VOCÊ SO ESTAVA A <strong>${speed}Km/h</strong></p>`
+
+        }
+    </script>
+</body>
+</html>
