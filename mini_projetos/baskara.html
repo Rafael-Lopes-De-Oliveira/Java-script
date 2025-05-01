@@ -53,18 +53,29 @@
 
             var res = window.document.querySelector('div#res')
 
+
             var na = Number(a.value)
             var nb = Number(b.value)
             var nc = Number(c.value)
-
-
             var delta = nb**2 - 4*na*nc
 
-            let raizdelta = Math.sqrt(delta);
-            var valx1 = (-nb + raizdelta ) /(2 * na)
-            var valx2 = (-nb - raizdelta ) /(2 * na)
+            if (na == 0){
+                res.innerHTML = `CONTA INVÁLIDA O VALOR DE é igual a 0`
 
-            res.innerHTML =`△ = ${delta} <br> X1= ${valx1} <br> X2=${valx2}`
+            }else{
+
+                if (delta < 0){
+                    res.innerHTML = `O valor de <strong> △ =${delta}</strong> é Negativo! impossivel continuar a conta!`
+
+                }else{
+
+                    let raizdelta = Math.sqrt(delta);
+                    var valx1 = (-nb + raizdelta ) /(2 * na)
+                    var valx2 = (-nb - raizdelta ) /(2 * na)
+                    res.innerHTML =`△ = ${delta} <br> X1= ${valx1} <br> X2=${valx2}`
+                }
+            }
+            
         }
 
         

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    País: <input type="text" name="naci" id="naci">
+    <input type="button" value="Testar" onclick="testar()">
+    <!-- <p>Sua origem é:</p> -->
+
+    <div id="origem"></div>
+
+
+    <script>
+        function testar(){
+            var nac = window.document.querySelector('input#naci')
+            
+            var nc = String(nac.value)
+            var origem = window.document.querySelector('div#origem')
+
+            origem.innerHTML = `<p>Sua origem é o país <strong>${nc}</strong></p>`
+ 
+            if (nc != 'Brasil'){      
+                origem.innerHTML += `<p>Você é <strong>Estrageiro!</strong></p>`
+            }else{
+                origem.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
