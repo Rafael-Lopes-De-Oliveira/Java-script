@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formula de Baskara</title>
     <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+
         div{
             display: inline-block ;
         }
@@ -16,45 +23,54 @@
             width: 37px;
         }
 
-        input#calcular{
+        input#calc{
             margin-top: 10px;
-            width: 90px;
+            width: 200px;
             flex: auto;
-            display: inline-block;
+            display: block;
         }
 
     </style>
 </head>
 <body>
-    A:<input type="number" name="varlora" id="varlora" class="numbers">
-    B:<input type="number" name="varlorb" id="varlorb" class="numbers">
-    C:<input type="number" name="varlorc" id="varlorc" class="numbers"> <br>
-    
-    <input type="button" value="calcular" id="calcular" onclick="calc()">:
+    <h1>Calculando Baskara: Valor de Delta e do X1 e X2</h1>
+
+    A:<input type="number" name="valora" id="valora" class="numbers">
+    B:<input type="number" name="valorb" id="valorb" class="numbers">
+    C:<input type="number" name="valorc" id="valorc" class="numbers"> <br>
+
+    <input type="button" value="CALCULAR"  id="calc" onclick="calc()">
     
     <div id="res">Resultado</div>
 
     <script>
-
         function calc(){
-            var a = window.document.querySelector('varlora')
+            var a = window.document.querySelector('#valora')
 
-            var b = window.document.querySelector('valorb')
+            var b = window.document.querySelector('#valorb')
 
-            var c = window.document.querySelector('valorc')
+            var c = window.document.querySelector('#valorc')
 
-            var result = window.document.querySelector('div#res')
+            var res = window.document.querySelector('div#res')
 
-            var na = number(a.value)
-            var nb = number(b.value)
-            var nc = number(d.value)
+            var na = Number(a.value)
+            var nb = Number(b.value)
+            var nc = Number(c.value)
 
 
-            var delta = nb * nb - 4*na*nc
+            var delta = nb*nb - 4*na*nc
 
-            result.innerText = ` Valor de Delta é igual a ${delta} `
+            let raizdelta = Math.sqrt(delta);
+            var valx1 = (-nb + raizdelta ) /(2 * na)
+            var valx2 = (-nb - raizdelta ) /(2 * na)
 
+
+
+
+            res.innerText =`△ = ${delta}| X1= ${valx1} | X2=${valx2}`
         }
+
+        
     </script>
 
 </body>
