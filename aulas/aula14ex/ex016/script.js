@@ -1,13 +1,13 @@
 
 function contar(){
 
-    var ini = window.document.querySelector('input#inicio')
+    var ini = window.document.querySelector('#inicio')
 
-    var end = window.document.querySelector('input#fim')
+    var end = window.document.querySelector('#fim')
 
-    var pass = window.document.querySelector('input#passos')
+    var pass = window.document.querySelector('#passos')
 
-    var  most  = window.document.querySelector('div#mostrar')
+    var  msg  = window.document.querySelector('#msg')
 
 
     var ini = Number(ini.value)
@@ -21,7 +21,7 @@ function contar(){
         window.alert(`valor de passos é ${pass} mudando seu valor para 1 `)
     }
 
-    most.innerHtml = `valor de inicio ${ini} , do fim ${end} e de passos ${pass}`
+    msg.innerHTML = `O INICIO: ${ini} , O FIM: ${end} e PASSOS: ${pass}`
 
 
 
