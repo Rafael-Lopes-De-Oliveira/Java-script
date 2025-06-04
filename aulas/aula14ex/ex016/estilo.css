@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+
+
+body{
+    background-color: rgb(105, 105, 236);
+
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    height: 220px;
+    width: 400px;
+    margin: auto auto;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.348);
+}
+
+#organizar{
+    margin: auto;
+    padding: 10px;
+}
+
+div{
+    display: block;
+    margin:5px 5px;
+}
+
+#inicio,#fim,#passos{
+    margin: 5px auto;
+}
+
+#contar{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 130px;
+}
+
+p{
+    text-align: center;
+}
+
+footer{
+    color: white;
+    font-size: 17px;
+}
