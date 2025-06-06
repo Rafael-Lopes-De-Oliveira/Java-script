@@ -9,6 +9,7 @@ function contar(){
 
     var  msg  = window.document.querySelector('#msg')
 
+    var cont = ini
 
     var ini = Number(ini.value)
     var end = Number(end.value)
@@ -21,8 +22,11 @@ function contar(){
         window.alert(`valor de passos é ${pass} mudando seu valor para 1 `)
     }
 
-    msg.innerHTML = `O INICIO: ${ini} , O FIM: ${end} e PASSOS: ${pass}`
+    // msg.innerHTML = `O INICIO: ${ini} , O FIM: ${end} e PASSOS: ${pass}`
 
+    for(var cont = ini; cont <= end; cont += pass ){
+        msg.innerHTML = `${cont}`
+    }
 
 
 }
