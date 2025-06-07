@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+
+
+body{
+    background-color: rgb(105, 105, 236);
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    height: 300px;
+    width: 400px;
+    margin: auto auto;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.348);
+}
+div{
+    text-align: center;
+}
+
+input{
+    margin:0px auto 5px auto;
+    display: block;
+    
+}
+p{
+    text-align: center;
+}
+
+footer{
+    color: white;
+    font-size: 17px;
+}
