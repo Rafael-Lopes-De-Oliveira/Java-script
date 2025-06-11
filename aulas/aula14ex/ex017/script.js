@@ -19,6 +19,3 @@ function tabu(){
 
 }
 
-function carregar(){
-    body.style = ''
-}
