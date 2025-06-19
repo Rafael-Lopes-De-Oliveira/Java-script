@@ -1,21 +1,28 @@
 function tabu(){
-    var numb = window.document.querySelector('#numero')
- 
-    var numb= Number(numb.value)
 
-    var msg = window.document.querySelector('#msg')
 
-    if(numb == ''){
-        window.alert(`Campo numerico esta vazio, valor alterado para 0`)
+    let numb = window.document.querySelector('#numero')
+
+    let msg = window.document.querySelector('#msg')
+
+    if( numb.value.length == 0){
+        window.alert(`Campo numerico esta vazio`)
+    } else {
+        let number = Number(numb.value)   
+        
+        msg.innerHTML = ''
+
+        for(let cont = 1; cont <= 10; cont += 1 ){
+            
+            let item = document.createElement('option')
+
+            item.text = `${number} X ${cont} = ${number*cont}`
+
+            item.value = ` msg${cont}`
+
+            msg.appendChild(item)
+
+        }
     }
-
-    var result = 0
-
-    for(var cont = 0; cont <= 10; cont += 1 ){
-        var  result = numb * cont
-
-        msg.innerHTML += ` <br> ${numb} X ${cont} = ${result} `
-    }
-
 }
 
