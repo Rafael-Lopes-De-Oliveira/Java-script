@@ -1,6 +1,5 @@
 function tabu(){
 
-
     let numb = window.document.querySelector('#numero')
 
     let msg = window.document.querySelector('#msg')
