@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        main{
-            background-color: black;
-            margin: auto;
-            color: white;
-            text-align: center;
-            width: 60vw;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Cidade Infinita Simples</title>
+  <style>
+    html, body { margin: 0; padding: 0; overflow: hidden; }
+    canvas { display: block; background: #222; }
+  </style>
 </head>
 <body>
+  <canvas id="c"></canvas>
+  <script>
+    const canvas = document.getElementById('c');
+    const ctx    = canvas.getContext('2d');
 
-    <main>
-        <script>
-            window.alert('Responda a esta ficha!')
-            var nome = window.prompt('Qual seu nome?')
-        
-            var nasc = window.prompt('Ano que você nasceu?')
-        
-            var ano_atual = window.prompt('Ano atual?')
-        
-            var idade = ano_atual - nasc
-        
-            document.write(`Nome: ${nome}<br> </br> ` )
-            document.write(`Idade: ${idade}`)
-        </script>
-    </main>
+    // Ajusta o tamanho do canvas
+    function resize(){
+      canvas.width  = innerWidth;
+      canvas.height = innerHeight;
+      draw();
+    }
+    window.addEventListener('resize', resize);
+
+    // Escala atual (começa em 1)
+    let scaleFactor = 1;
+
+    // Desenha uma grade de blocos no centro
+    function draw(){
+      ctx.setTransform(1,0,0,1,0,0);      // reseta transformações
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.translate(canvas.width/2, canvas.height/2);
+      ctx.scale(scaleFactor, scaleFactor);
+
+      const size = 50;   // tamanho de cada “prédio”
+      const gap  = 10;   // espaço entre eles
+      const r    = 4;    // quanto a grade vai de -r a +r
+
+      ctx.fillStyle = '#6a6';
+      for(let x=-r; x<=r; x++){
+        for(let y=-r; y<=r; y++){
+          ctx.fillRect(
+            x*(size+gap),
+            y*(size+gap),
+            size, size
+          );
+        }
+      }
+    }
+
+    // Ao apertar ↑, dobra a escala
+    window.addEventListener('keydown', e => {
+      if(e.key === 'ArrowUp'){
+        scaleFactor *= 2;
+        draw();
+      }
+    });
+
+    resize();  // inicializa
+  </script>
 </body>
 </html>
