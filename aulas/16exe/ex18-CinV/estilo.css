@@ -33,8 +33,7 @@ section>div:nth-child(2){
     display: inline;
 }
 select{
-    width:90% ;
-    height: 20px;
+    width: 150px;
 }
 
 option{
