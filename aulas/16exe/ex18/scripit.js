@@ -4,32 +4,47 @@ let num = window.document.querySelector('#numero');
 
 let regis = window.document.querySelector('#valores');
 
-function adc(){
 
+function adc(){
     if(num.value == ""){
-        window.alert('Escreva Algo ai AMIGAO')
-    }else if(num.value > 100 || num.value < 1){
-        window.alert('Valor superior a 100')
-    }else{
+        window.alert('Escreva Algo ai AMIGAO');
+    }
+    if(InNumero(num.value) && !ValinLista(num.value, Totnum)){
         let option = document.createElement("option");
         option.innerText = `O valor ${Number(num.value)} foi adicionado`;
-        option.style.width = '300px'
-        option.value = Number(num.value)
-        // if(num.value ==  Totnum.indexOf(option.value)){
-        //     window.alert('Valor já adicionado')
-        // }else{
-        // }
+        option.style.width = '300px';
         regis.appendChild(option);
+        option.value = Number(num.value);
         Totnum.push(option.value);
+    }else{
+        window.alert('Valor invalido ou já encontrado na Lista!!');
     }
+
     
 
+}
+
+function ValinLista(n , l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    }else{
+        return false
+    }
+}
+
+
+function InNumero(n){
+    if(Number(n) >= 1 && Number(n) <=100){
+        return true
+    }else{
+        return false
+    }
 }
 
 
 function soma() {
   return Totnum.reduce((a, b) =>Number(a) +
-Number(b)  , 0)
+Number(b)  , 0);
 }
 
 
