@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <section>
+        <section id="calc">
+            <div id="visor">
+            </div>
+            <button type="button" id="um" value="1">1</button>
+            <button type="button" id="dois">2</button>
+            <button type="button" id="tres">3</button>
+            <button type="button" id="quatro">4</button>
+            <button type="button" id="cinco">5</button>
+            <button type="button" id="seis">6</button>
+            <button type="button" id="sete">7</button>
+            <button type="button" id="oito">8</button>
+            <button type="button" id="nove">9</button>
+            <button type="button" id="zero">0</button>
+            <button type="button" id="mais" onclick="somar()">+</button>
+            <button type="button" id="menos" onclick="menos()">-</button>
+            <button type="button" id="vezes" onclick="vezes()">x</button>
+            <button type="button" id="dividido" onclick="dividir()">/</button>
+            <button type="button" id="raiz" onclick="raiz()">raiz</button>
+            <button type="button" id="igual" onclick="mostrar()">=</button>
+        </section>
+    </section>
+</body>
+<script src="calculadora.js"></script>
+</html>

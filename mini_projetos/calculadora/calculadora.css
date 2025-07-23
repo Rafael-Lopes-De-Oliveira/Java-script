@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(167, 167, 218, 0.707);
+}
+
+#calc{
+    margin: auto;
+    width: 20vw;
+    height: 50vh;
+    background-color: rgb(66, 66, 157);
+    padding: 10px;
+}
+
+#visor{
+    display: block;
+    width: 10vw;
+    height: 6vh;
+    margin: auto auto 7px;
+    background-color: white;  
+    border-radius: 4px;
+}
+
+button{
+    border-radius: 4px;
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(143, 198, 133);
+    margin: 0px auto;
+}
