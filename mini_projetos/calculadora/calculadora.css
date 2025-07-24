@@ -5,34 +5,63 @@
     margin: 0px;
 }
 
-html,body{
+
+h1{
+    text-align: center;
+    margin: 20px auto;
+}
+
+html{
     width: 100vw;
     height: 100vh;
-    background-color: rgba(167, 167, 218, 0.707);
+    background-color: rgba(17, 17, 121, 0.707);
 }
 
 #calc{
+    background-color: rgba(6, 111, 55, 0.788);
     margin: auto;
-    width: 20vw;
+    width: 17vw;
     height: 50vh;
-    background-color: rgb(66, 66, 157);
     padding: 10px;
+    border-radius: 8px;
 }
 
-#visor{
-    display: block;
-    width: 10vw;
-    height: 6vh;
-    margin: auto auto 7px;
+#olhador{
+    width: 200px;
+    height: 50px;
+    margin: 5px auto 30px auto;
     background-color: white;  
-    border-radius: 4px;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#butaozao{
+    display: grid;
+    grid-template-columns: repeat(4 , 0fr);
+    gap:4px;
+    margin:auto;
+    justify-content: center;
 }
 
 button{
-    border-radius: 4px;
-    display: inline-block;
-    width: 60px;
-    height: 40px;
-    background-color: rgb(143, 198, 133);
-    margin: 0px auto;
+    border-radius: 10px;
+    width: 50px;
+    height: 60px;
+    background-color: rgba(15, 205, 161, 0.788);
+    border-color: white;
+    margin:auto 4px;
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.792);
+    transition: 0.56s;
+}
+
+button:nth-child(1){
+    background-color: rgba(239, 84, 84, 0.89);
+}
+
+.especiais{
+    background-color:rgba(169, 104, 104, 0.788) ;
 }

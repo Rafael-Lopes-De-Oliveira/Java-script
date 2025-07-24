@@ -7,27 +7,28 @@
     <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
-    <h1>Calculadora</h1>
     <section>
+        <h1>Calculadora</h1>
         <section id="calc">
-            <div id="visor">
+            <p name="olhador" id="olhador"></p>
+            <div id="butaozao">
+                <button type="button" onclick="limpe()">C</button>
+                <button type="button" onclick="nume('1')" >1</button>
+                <button type="button" onclick="nume('2')" >2</button>
+                <button type="button" onclick="nume('3')" >3</button>
+                <button type="button" onclick="nume('4')" >4</button>
+                <button type="button" onclick="nume('5')" >5</button>
+                <button type="button" onclick="nume('6')" >6</button>
+                <button type="button" onclick="nume('7')" >7</button>
+                <button type="button" onclick="nume('8')" >8</button>
+                <button type="button" onclick="nume('9')" >9</button>
+                <button type="button" onclick="nume('0')" >0</button>
+                <button type="button" class="especiais" onclick="nume('+')">+</button>
+                <button type="button" class="especiais"  onclick="nume('-')">-</button>
+                <button type="button" class="especiais"  onclick="nume('*')">x</button>
+                <button type="button" class="especiais"  onclick="nume('/')">/</button>
+                <button type="button" class="especiais"  onclick="resultado()">=</button>
             </div>
-            <button type="button" id="um" value="1">1</button>
-            <button type="button" id="dois">2</button>
-            <button type="button" id="tres">3</button>
-            <button type="button" id="quatro">4</button>
-            <button type="button" id="cinco">5</button>
-            <button type="button" id="seis">6</button>
-            <button type="button" id="sete">7</button>
-            <button type="button" id="oito">8</button>
-            <button type="button" id="nove">9</button>
-            <button type="button" id="zero">0</button>
-            <button type="button" id="mais" onclick="somar()">+</button>
-            <button type="button" id="menos" onclick="menos()">-</button>
-            <button type="button" id="vezes" onclick="vezes()">x</button>
-            <button type="button" id="dividido" onclick="dividir()">/</button>
-            <button type="button" id="raiz" onclick="raiz()">raiz</button>
-            <button type="button" id="igual" onclick="mostrar()">=</button>
         </section>
     </section>
 </body>
