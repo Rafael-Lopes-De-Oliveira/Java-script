@@ -17,9 +17,12 @@ const nomes = [
 
 const button = window.document.querySelector("#filtrar").addEventListener("click", (n) =>{
     const filtronomes = nomes.filter(nome => nome[0].toUpperCase() == letra.value.toUpperCase());
-    document.body.innerHTML +=`<p>Lista de Nomes Filtrados: ${filtronomes.join(",")} </p>`;
-    
+    let p = document.createElement('p')
+    p.innerHTML += `<p>Lista de Nomes Filtrados:</p> ${filtronomes.join(",")} `;
+    document.body.appendChild(p);
 })
+
+
 
 
 
