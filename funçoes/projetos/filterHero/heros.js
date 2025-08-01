@@ -9,7 +9,7 @@ const heros = [
     {nome:'Lucas N.', power:13.2 , victory:2 },
 ]
 
-function avalaiarEquipe(){
+function avaliarEquipe(){
     const betterHeros = heros.filter((hero) => hero.power>=60 && hero.victory>=5);
 
     const heroNome = betterHeros.map((hero)=> hero.nome);
@@ -25,7 +25,32 @@ function avalaiarEquipe(){
 }
 
 
-avalaiarEquipe();
+avaliarEquipe();
+
+
+
+//////////////////////
+
+IA
+function avaliarEquipe() {
+  const betterHeros = heros.filter(hero => hero.power >= 60 && hero.victory >= 5);
+
+  const heroisTreinados = betterHeros.map(hero => ({
+    nome: hero.nome,
+    poder: (hero.power * hero.power) / 10
+  }));
+
+  const poderTotal = heroisTreinados.reduce((acc, h) => acc + h.poder, 0);
+
+  return {
+    nomes: heroisTreinados.map(h => h.nome),
+    poderes: heroisTreinados.map(h => h.poder.toFixed(2)),
+    poderTotal: poderTotal.toFixed(2)
+  };
+}
+
+const resultado = avaliarEquipe();
+console.log
 /*
 console.log(heros);
 console.log(heroUp);
