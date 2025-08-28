@@ -12,6 +12,6 @@ const people = (name,age,sex) => {
 let userRafael = people('Rafael','17','Masculino')
 
 let userf = people(false,'15',false);
-let userAges = userRafael.age + userf.age
+let userAges = userRafael.age  + ' and '+ userf.age
 console.log(userAges);
 // console.log(userRafael.most());
