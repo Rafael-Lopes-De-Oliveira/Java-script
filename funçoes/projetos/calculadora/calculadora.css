@@ -18,10 +18,10 @@ html{
 }
 
 #calc{
-    background-color: rgba(6, 111, 55, 0.788);
+    background-color: rgba(8, 6, 111, 0.788);
     margin: auto;
-    width: 17vw;
-    height: 50vh;
+    width: 60vw;
+    height: 54vh;
     padding: 10px;
     border-radius: 8px;
 }
