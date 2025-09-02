@@ -5,79 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formula de Baskara</title>
-    <style>
-        h1{
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 20px;
-        }
+    <link rel="stylesheet" href="style.css">
 
-
-        div{
-            display: inline-block ;
-        }
-        input{
-            width: 60px;
-        }
-
-        input.numbers{
-            width: 37px;
-        }
-
-        input#calc{
-            margin-top: 10px;
-            width: 200px;
-            flex: auto;
-            display: block;
-        }
-
-    </style>
 </head>
 <body>
     <h1>Calculando Baskara: Valor de Delta e do X1 e X2</h1>
 
-    A:<input type="number" name="valora" id="valora" class="numbers">
-    B:<input type="number" name="valorb" id="valorb" class="numbers">
-    C:<input type="number" name="valorc" id="valorc" class="numbers"> <br>
+    <section >
+        A:<input type="number" name="valora" id="valora" class="numbers">
+        B:<input type="number" name="valorb" id="valorb" class="numbers">
+        C:<input type="number" name="valorc" id="valorc" class="numbers"> <br>
+        <input type="button" value="CALCULAR"  id="calc" onclick="calc()">
 
-    <input type="button" value="CALCULAR"  id="calc" onclick="calc()">
+        <div id="res" >
+        </div>
+    </section>
+
     
-    <div id="res">Resultado</div>
-
     <script>
+        
+        let res = window.document.querySelector('div#res')
+        res.innerHTML += `Resposta Aqui! <br>`
         function calc(){
-            var a = window.document.querySelector('#valora')
+            res.innerHTML = ""
+            res.innerHTML += `Resposta Aqui! <br>`
+            let a = window.document.querySelector('#valora')
 
-            var b = window.document.querySelector('#valorb')
+            let b = window.document.querySelector('#valorb')
 
-            var c = window.document.querySelector('#valorc')
-
-            var res = window.document.querySelector('div#res')
+            let c = window.document.querySelector('#valorc')
 
 
-            var na = Number(a.value)
-            var nb = Number(b.value)
-            var nc = Number(c.value)
-            var delta = nb**2 - 4*na*nc
+            let na = Number(a.value)
+            let nb = Number(b.value)
+            let nc = Number(c.value)
+            let delta = nb**2 - 4*na*nc
 
             if (na == 0){
                 res.innerHTML = `CONTA INVÁLIDA O VALOR DE é igual a 0`
 
             }else{
                 if (delta < 0){
-                    res.innerHTML = `O valor de <strong> △ =${delta}</strong> é Negativo! impossivel continuar a conta!`
+                    res.innerHTML += `O valor de <strong> △ = ${delta}</strong> é Negativo! impossivel continuar a conta!`
 
                 }else{
 
                     let raizdelta = Math.sqrt(delta);
-                    var valx1 = (-nb + raizdelta ) /(2 * na)
-                    var valx2 = (-nb - raizdelta ) /(2 * na)
-                    res.innerHTML =`△ = ${delta} <br> X1= ${valx1} <br> X2=${valx2}`
-                }
-            }
-            
+                    let valx1 = (-nb + raizdelta ) /(2 * na)
+                    let valx2 = (-nb - raizdelta ) /(2 * na)
+                    res.innerHTML +=`△ = ${delta} <br> X1=  ${valx1} <br> X2= ${valx2}`
+                }               
+            }            
         }
-
+        
         
     </script>
 
