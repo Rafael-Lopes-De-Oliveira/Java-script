@@ -3,7 +3,9 @@ let result = window.document.querySelector('#olhador');
 
 const nume = (num) =>{
   result.innerHTML += num;
+  
 }
+
 
 const limpe = () =>{
   return result.innerHTML = ""
