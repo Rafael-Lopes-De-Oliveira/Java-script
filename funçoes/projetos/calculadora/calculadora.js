@@ -5,8 +5,7 @@ let valguardado = true;
 
 const nume = (num) =>{
   result.innerHTML += num;
-  result.value += num;
-  
+  result.value = result.innerHTML; // Na hora de clicar em fazer a conta ele vai jogar a operação que estiver na tela na variavel.
 }
 
 
@@ -29,8 +28,7 @@ const ponto = window.document.querySelector('#ponto').addEventListener('click', 
 
 
 const resultado = () =>{
-  let math =  eval(result.value);
-  result.innerHTML = math;
+  result.innerHTML = eval(result.value);
 }
 
 
